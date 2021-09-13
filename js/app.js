@@ -216,8 +216,8 @@ const showProducts = (products) => {
       </div>
       <h3 class="text-success">${product.title}</h3>
       <p>Category: ${product.category}</p>
-	<p>Rating Count: ${product.rating.count}</p>
-	<p class="text-danger" >Average Rating: ${product.rating.rate}</p>
+	<p class ="text-success">Rating Count: ${product.rating.count}</p>
+	<p class="text-danger" >Average Rating:   ${product.rating.rate} </p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-info">Details</button></div>
@@ -273,6 +273,7 @@ const updateTaxAndCharge = () => {
 };
 
 //grandTotal update function
+
 const updateTotal = () => {
 	const grandTotal = getInputValue('price') + getInputValue('delivery-charge') + getInputValue('total-tax');
 	document.getElementById('total').innerText = grandTotal.toFixed(2);
